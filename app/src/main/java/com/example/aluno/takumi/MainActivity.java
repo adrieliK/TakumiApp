@@ -13,7 +13,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private Button bloc;
-    private Button bface;
     private Button bped;
     private Button bcard;
 
@@ -25,9 +24,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.elementos);
 
         bloc = (Button) findViewById(R.id.bloc);
-        bface = (Button) findViewById(R.id.bface);
         bped = (Button) findViewById(R.id.bped);
-        bcard = (Button) findViewById(R.id.bcard;
+        bcard = (Button) findViewById(R.id.bcard);
 
         bloc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, Cardapio.class));
             }
         });
+
 
 
 

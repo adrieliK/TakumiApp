@@ -24,11 +24,18 @@ public class Localizacao extends FragmentActivity implements OnMapReadyCallback 
         mapFragment.getMapAsync(this);
 
 
-        }@Override
-        public void onMapReady(GoogleMap mMap) {2
-            mMap.addMarker(new MarkerOptions().position(new LatLng(-23.072199, -52.450512)).title("Takumi Sushi Delivery"));
         }
+
+    @Override
+    public void onMapReady(GoogleMap mMap) {
+        //mMap = GoogleMap();
+
+        // Add a marker in Sydney and move the camera
+        LatLng sydney = new LatLng(-23.072199, -52.450512);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Takumi Sushi Delivery"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
+}
 
 
     /**
@@ -40,13 +47,5 @@ public class Localizacao extends FragmentActivity implements OnMapReadyCallback 
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
-    @Override
-    public void onMapReady(GoogleMap mMap) {
-        mMap = GoogleMap;
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-23.072199, -52.450512);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Takumi Sushi Delivery"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-    }
-}
+
